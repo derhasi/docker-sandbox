@@ -7,6 +7,9 @@ MYPW="mysecretpassword"
 docker run \
   --name $NAME \
   -e MYSQL_ROOT_PASSWORD=$MYPW \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=mypassword \
+  -e MYSQL_DATABASE=mydb \
   -d \
   -p 3306:3306 \
   mariadb:5.5
