@@ -3,7 +3,7 @@
 NAME="example-mariadb"
 MYPW="mysecretpassword"
 
-# Run a php script once
+# Runs mariadb server.
 docker run \
   --name $NAME \
   -e MYSQL_ROOT_PASSWORD=$MYPW \
