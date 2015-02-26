@@ -1,0 +1,14 @@
+# A docker-compose config for packagist server dependencies
+db:
+  image: mariadb:5.5
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: rootpw
+    MYSQL_USER: me
+    MYSQL_PASSWORD: mypw
+    MYSQL_DATABASE: mydb
+redis:
+  image: redis
+  ports:
+    - "6379:6379"
