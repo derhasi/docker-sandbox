@@ -1,0 +1,18 @@
+# This a docker-compose config to create example-lamp
+# @see ../example-lamp-docker-compose.sh
+web:
+  build: .
+  links:
+    - db
+  ports:
+    - "80:80"
+  volumes:
+    - .:/var/www
+    - ./config-php:/usr/local/etc/php
+db:
+  image: mariadb:5.5
+  environment:
+    MYSQL_ROOT_PASSWORD: rootpw
+    MYSQL_USER: me
+    MYSQL_PASSWORD: mypw
+    MYSQL_DATABASE: mydb
