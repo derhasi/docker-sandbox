@@ -16,3 +16,7 @@ solr:
   build: solr
   ports:
     - "8983:8983"
+rabbit:
+  image: rabbitmq
+  ports:
+    - "8080:5672"
